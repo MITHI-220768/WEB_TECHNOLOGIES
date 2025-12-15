@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>website</head>
+<style>
+    .bgclr1{
+        background-color:lightgrey;
+    }
+    .bgclr2{
+        background-color:lightyellow;
+    }
+</style>
+    <body class="bgclr1" id="body" onload="greet()">
+    <script>
+        var a = 10
+        let b= 20
+        const c= 30
+        console.log(a,b,c);
+
+        function hi(){
+            alert("hello world")
+        }
+        function addition(x,y){
+            return x+y
+        }
+        console.log(addition(5,15));
+
+        const subtraction=(x,y)=> x-y
+        console.log(subtraction(b,a));
+
+        function introduction(){
+            alert("INTRODUCTION");
+            let name=prompt("Enter your name:");
+            let age =prompt("Enter your age:");
+            console.log("My name is " + name + " and I am " + age + " years old.");
+        }
+
+        function addcontent(){
+            document.getElementById("demo").innerHTML+="<p>content added</p>";
+
+        }
+        function removecontent(){
+            document.getElementById("demo").innerHTML="content removed";
+        }
+
+        function bgcolor(){
+            document.body.style.backgroundColor="lightblue";
+        }
+
+        function fontsize(){
+            document.getElementById("demo").style.fontSize="30px";
+        }
+
+        function fontcolor(){
+            document.getElementById("demo").style.color="blue";
+        }
+        function togglebgcolor(){
+            var element = document.getElementById("body");
+            if(element.classList.contains("bgclr1")){
+                element.classList.remove("bgclr1");
+                element.classList.add("bgclr2");
+            } else {
+                element.classList.remove("bgclr2");
+                element.classList.add("bgclr1");
+            }
+        }
+        function mouseover(){
+            document.getElementById("blank").style.color="red";
+        }
+        function mouseout(){
+            document.getElementById("blank").style.color="green";
+        }
+        function Submit(event){
+            event.preventDefault();
+            console.log("form is submitted");
+        }
+
+        function greet(){
+            let user=prompt("Enter your name:");
+            document.getElementById('greetings').innerHTML="Welcome " + user + " to our website!";
+        }
+       
+        function validate(event){
+            event.preventDefault();
+            function upper(str){
+                return /[A-Z]/.test(str);
+            }
+            let name=document.getElementById("name").value.toUpperCase();
+            let email=document.getElementById("email").value.toUpperCase();
+            if(name=="" || email==""){
+                alert("Name and Email must be filled out");
+                return false;
+            }
+            else{
+                console.log("form submitted successfully");
+                return true;
+            }
+        }
+    </script>
+    <INPUT type="button" value="Click Me" onclick="hi()"><br>
+    <input type="button" value="Introduction" onclick="introduction()"><br>
+    <p id="demo">click the button to change   </p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML='text changed'">Click Me!</button>
+    <button type="button" onclick="addcontent()">Add Content</button><br>
+    <button type="button" onclick="removecontent()">Remove Content</button><br>
+    <button type="button" onclick="bgcolor()">bgColor</button><br>
+    <button type="button" onclick="fontsize()">fontsize</button><br>
+    <button type="button" onclick="fontcolor()">fontcolor</button><br>
+    <button type="button" onclick="togglebgcolor()">Toggle BgColor</button><br>
+    <a href="www.google.com" onmouseover="mouseover()" onmouseout="mouseout()" id="blank">google</a>
+    <p id="greetings"></p>
+    <form onSubmit="Submit(event)">
+        Name: <input type="text" name="name"><br>
+        Email: <input type="text" name="email"><br>
+        Age: <input type="text" name="age"><br>
+        <input type="submit"  value="Submit">
+    </form>
+    <form name="myForm" onsubmit="return validate(event)">
+        Name: <input type="text" id="name" placeholder="enter name"><br>
+        Email: <input type="text" id="email" placeholder="enter email"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
