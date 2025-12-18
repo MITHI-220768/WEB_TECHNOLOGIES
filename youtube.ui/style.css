@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    border-radius: 15px;
+
+}
+
+
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.mail-btn:hover {
+    box-shadow: 0 6px 8px #727070;
+    cursor: pointer;
+
+}
+
+.logo {
+    font-size: 28px;
+    color: rgb(241, 12, 12);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    right: 7%;
+}
+
+.logo .logo-img {
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    position: relative;
+    right: 5px;
+
+}
+.search-box {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    position: relative;
+    right: 40px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius:20px 0 0 20px;/*TOP LEFT, TOP RIGHT, BOTTOM RIGHT, BOTTOM LEFT*/
+    border: none;
+    background-color: whitesmoke;
+    box-shadow: inset 0 0 5px rgba(153, 153, 153, 0.1);
+    font-size: 16px;
+    
+}
+
+.search-box button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background-color: whitesmoke;
+}
+.search-box button:hover {
+    background-color: #e0e0e0;
+}
+.search-box .micro {
+    margin-left: 10px;
+    border-radius: 50%;
+    background: whitesmoke;
+    border: none;
+}
+.search-box .micro:hover {
+    background-color: #e0e0e0;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    right: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px; 
+    background: white;
+    height: calc(100vh - 60px);
+    padding: 12px;
+}
+
+
+.menu-item {
+    display: flex;                 
+    align-items: center;
+    gap: 16px;                    
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background: #eee;
+}
+
+.menu-item.active {
+    background: #e5e5e5;
+    font-weight: 500;
+}
+.menu-item i {
+    font-size: 18px;
+}
+
+.menu-title {
+    font-size: 13px;
+    font-weight: 525;
+    color: #0a0a0a;
+    font-size: 16px;
+    padding: 8px 12px;    
+
+}
+
+
+.sidebar hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 8px 0;
+}
+
+.sidebar {
+    width: 220px;
+    background: white;
+    height: calc(100vh - 60px);
+    padding: 12px;
+    transition: width 0.25s ease;
+}
+
+.sidebar.mini {
+    width: 72px; 
+}
+
+/* hide text in mini mode */
+.sidebar.mini .menu-item span,
+.sidebar.mini .menu-title,
+.sidebar.mini hr {
+    display: none;
+}
+
+/* center icons */
+.sidebar.mini .menu-item {
+    justify-content: center;
+    padding: 12px 0;
+}
+
+
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    right: 60px;
+}
+
+.mail-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(175, 116, 116);
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+
+}
+
+.bell {
+   margin-left: 10px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    width: 40px;
+    height:40px;
+    font-size: 20px;
+     padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bell:hover {
+    background-color: #e0e0e0;
+}
+
+.create{
+    width: 100%;
+    padding: 12px;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 14px;
+    position: relative;
+    right: 30px;
+    top: 8px;
+}
+
+.create button i {
+    margin-right: 8px;
+    
+    border-radius: 50%;
+    background: whitesmoke;
+    border: none;
+
+}
+.create:hover {
+    background-color: #e0e0e0;
+}
+.feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+    height: auto;
+}
+
+.video-card:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+
+.video-card img {
+    width: 330px;
+    height: 186px;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+
+.video-card h4 {
+    margin: 10px 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.video-card p {
+    color: #606060;
+    font-size: 14px;
+}
+
+.video-card span {
+    font-size: 13px;
+    color: #909090;
+}
+
+

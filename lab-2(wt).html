@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Client UI</title>
+</head>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+.topbar{
+    height: 100px;
+    background-color: #f6f9fc;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.topbar p{
+    color: rgb(82, 81, 81);
+    margin-left: 40px;
+    font-size: 28px;
+}
+
+.top-icons{
+    position: absolute;
+    right: 80px;
+    display: flex;
+    gap: 15px;
+}
+
+.top-icons i{
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.top-icons button{
+    border-radius: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+.top-icons i:hover{
+    color: #1a73e8;
+}
+
+
+.menu-btn{
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+}
+
+.menu-btn:hover{
+    color: #1a73e8;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo img{
+    width: 54px;
+    height: 52px;
+    position: absolute;
+    left: 45px;
+    top: 22px;
+}
+
+
+.search{
+    flex: 1;
+    position: absolute;
+    left: 20%;
+}
+.search .search-icon{
+    position: absolute;
+    left: 8px;
+    top: 35%;
+    color: rgb(56, 53, 53);
+    font-size: 18px;
+}
+
+.search input{
+    width: 250%;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    height: 50px;
+    background-color: rgb(200, 214, 218);
+    text-indent: 30px;
+    font-size: large;
+
+
+}
+.srch-btn{
+    position: absolute;
+    right: 2%;
+    padding: 8px 12px;
+    border: none;
+    background-color: rgb(175, 116, 116);
+    color: white;
+    border-radius: 100%;
+    font-size: 22px;
+    cursor: pointer;
+}
+.srch-btn:hover{
+    background-color: gray;
+}
+
+.main{
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.sidebar{
+    width: 20%;
+    background-color: #c9e3e7;
+    padding: 15px;
+    border-radius: 13px;
+}
+
+.compose{
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(70, 207, 241);
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.compose:hover{
+    background-color: #4bbcd6;
+}
+
+.sidebar p{
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+
+    
+
+}
+
+.sidebar p:hover{
+    background-color: #a9d6e5;
+}
+ .sidebar p:active{
+    background-color: #4bbcd6;
+    color: white;
+ }
+.sidebar i{
+    font-size: 16px;
+    display: flex;
+    position: absolute;
+    left: 30px;
+    
+}
+
+.emails{
+    width: 80%;
+    padding: 15px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.mail{
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.mail:hover{
+    background-color: #f1f3f4;
+}
+
+.mail b{
+    display: block;
+    font-size: 16px;
+}
+
+.mail span{
+    color: #555;
+}
+
+
+.mhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.time{
+    font-size: 12px;
+    color: #777;
+}
+
+</style>
+
+<body>
+
+
+<header class="topbar">
+    <div class="menu-btn" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</div>
+
+    <div class="logo">
+        <img src="https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png" alt="Logo">
+
+    <p>Gmail</p>
+</div>
+   <div class="search">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    <input type="text" placeholder="Search mail">
+</div>
+
+    <button class="srch-btn">M</button>
+<div class="top-icons">
+    <button><i class="fa-solid fa-gear"></i></button>
+    <button><i class="fa-solid fa-gem"></i></button>
+    <button><i class="fa-solid fa-circle-user"></i></button>
+
+</div>
+
+</header>
+
+
+<div class="main">
+
+
+    <div class="sidebar">
+        <button class="compose">
+    <i class="fa-solid fa-pen"></i> Compose
+</button>
+      <p><i class="fa-solid fa-inbox"></i> Inbox</p>
+      <p><i class="fa-solid fa-paper-plane"></i> Sent</p>
+      <p><i class="fa-solid fa-file-lines"></i> Drafts</p>
+      <p><i class="fa-solid fa-ellipsis"></i> More</p>
+      <p><i class="fa-solid fa-trash"></i> Trash</p>
+
+
+    </div>
+
+    
+    <div class="emails">
+        <div class="mail">
+            <div class="mhead">
+            <b>Google</b>
+            <small class="time">9:43 AM</small>
+            </div>
+            <span>Welcome to Gmail</span>
+        </div>
+
+        <div class="mail">
+            <div class="mhead">
+            <b>Amazon</b>
+            <small class="time">11:58 PM</small>
+            </div>
+            <span>Your order has been shipped</span>
+        </div>
+
+        <div class="mail">
+            <div class="mhead">
+            <b>College</b>
+            <small class="time">Yesterday</small>
+            </div>
+            <span>Semester exam notice</span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
