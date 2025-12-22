@@ -1,0 +1,20 @@
+.table3{
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+.head1{
+    background-color: rgba(70, 130, 180, 0.3); 
+    backdrop-filter: blur(5px); 
+    padding: 20px; 
+    border-radius: 8px;
+    text-align: center;
+}
+.ro{
+    background-color: #ecbcbc;
+   
+}
+
