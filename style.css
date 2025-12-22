@@ -18,3 +18,77 @@
    
 }
 
+.login-form {
+  width: 380px;
+  margin: 60px;
+  padding: 25px;
+  background: url(nature.jpg);
+  background-size: 100% 100%;
+  position: relative;
+  left: 25%;
+  color: beige;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+.login-form header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.inp {
+  margin-bottom: 15px;
+}
+
+.inp label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.inp input[type="text"],
+.inp input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.inp input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0,123,255,0.4);
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.radio-group label {
+  font-weight: normal;
+}
+
+.but {
+  width: 100%;
+  padding: 12px;
+  background: #255836;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.but:hover {
+  background: #09aa2c;
+}
+
+  

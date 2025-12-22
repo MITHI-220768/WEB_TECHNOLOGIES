@@ -423,13 +423,44 @@ body{
         </tr>
 
     </table>
-        
-    </table>
+   <form class="login-form">
+    <header>LOGIN FORM</header>
+
+    <div class="inp">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+
+    <div class="inp">
+        <label for="idno">ID No.</label>
+        <input type="text" id="idno" name="idno" required>
+    </div>
+
+    <div class="inp">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required>
+    </div>
+
+    <div class="inp">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="inp">
+        <label>Branch</label>
+        <div class="radio-group">
+            <label><input type="radio" name="branch" value="cse"> CSE</label>
+            <label><input type="radio" name="branch" value="ece"> ECE</label>
+            <label><input type="radio" name="branch" value="mech"> MECH</label>
+            <label><input type="radio" name="branch" value="civil"> CIVIL</label>
+        </div>
+    </div>
+
+    <button type="submit" class="but">Login</button>
+</form>
+
     </div>
 
 
-</div>
-
 </body>
 </html>
-
