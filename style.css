@@ -144,16 +144,20 @@ table{
   height: 195px;
   border-radius: 50%;   
   object-fit: cover;
-  border: 4px solid #73f1a4;
+  border: 4px solid #e0e0e0;
 
 }
 
 .portfolio button {
   padding: 10px 15px;
-  background-color: #85a6ece5;
+  background-color: #275ce0;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.portfolio button:hover {
+  background-color: #6b8fec;
 }
