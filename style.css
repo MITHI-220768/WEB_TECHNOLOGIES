@@ -1,6 +1,7 @@
-.table3{
+table{
     width: 50%;
     border-collapse: collapse;
+    border: 1px ;
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -51,7 +52,8 @@
 }
 
 .inp input[type="text"],
-.inp input[type="email"] {
+.inp input[type="email"],
+.inp input[type="password"] {
   width: 100%;
   padding: 10px;
   border-radius: 6px;
@@ -68,7 +70,7 @@
 .radio-group {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
+  
 }
 
 .radio-group label {
@@ -91,4 +93,67 @@
   background: #09aa2c;
 }
 
+.portfolio-header {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+.portfolio {
+  width: 800px;
+  margin: 100px auto;
+  padding: 25px;
+  background: url(portfolio-img.jpg);
+  background-size: cover;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0.15, 0, 0, 0.15);
+}
   
+.portfolio p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#name, #role, #skill, #exp, #place {
+  text-align: center;
+
+}
+
+.portfolio-content {
+  display: flex;
+  align-items: flex-start;   
+  gap: 30px;
+}
+
+.details-section {
+  text-align: left;
+  margin-top: 60px;
+}
+
+.photo-section {
+  margin-top: 0px;
+  text-align: left;
+
+
+}
+
+.photo-section img {
+  width: 200px;
+  height: 195px;
+  border-radius: 50%;   
+  object-fit: cover;
+  border: 4px solid #73f1a4;
+
+}
+
+.portfolio button {
+  padding: 10px 15px;
+  background-color: #85a6ece5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
